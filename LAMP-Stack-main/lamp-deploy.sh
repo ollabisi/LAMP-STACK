@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo "Initiating LAMP Stack installation and set-up"
 echo " "
 
