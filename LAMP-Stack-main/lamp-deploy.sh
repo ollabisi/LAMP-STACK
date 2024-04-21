@@ -34,11 +34,11 @@ sleep 2
 # configure mysql
 echo "Configuring MySQL"
 sudo mysql -u root -p
-CREATE USER 'yekinni'@'localhost' IDENTIFIED BY 'vagrant';
+CREATE USER 'ollabisi'@'localhost' IDENTIFIED BY 'vagrant';
 FLUSH PRIVILEGES;
 CREATE DATABASE laravel-app;
 SHOW DATABASES;
-GRANT ALL PRIVILEGES ON laravel-app.* to 'yekinni'@'localhost';
+GRANT ALL PRIVILEGES ON laravel-app.* to 'ollabisi'@'localhost';
 sudo systemctl stop mysql
 sudo systemctl restart mysql
 echo " "
@@ -88,11 +88,11 @@ sudo chown -R www-data bootstrap/cache
 #nano .env
 
 # configure apache for laravel
-sudo nano /etc/apache2/sites-available/azeezLaravelapp.conf
+sudo nano /etc/apache2/sites-available/ollabisiLaravelapp.conf
 
 # activate apache rewrite module and enable website
 sudo a2enmod rewrite
-sudo a2ensite azeezLaravelapp.conf
+sudo a2ensite ollabisiLaravelapp.conf
 sudo apache2ctl -t
 sudo systemctl restart apache2
 
